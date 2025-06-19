@@ -153,8 +153,11 @@ img.add_border {
 <p><span style="background-color: #ffff00;"> </span></p>
 <p>檔案:<a href="./../downloads/cd2025_final_41223152.7z">/downloads/cd2025_final_41223152.7z</a></p>
 <p>報告檔案:<a href="./../downloads/Shootcar-Project.pdf">/downloads/Shootcar-Project.pdf</a></p>
+<p><span>投球數量限制:</span></p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/HpbM-O10wJE?si=cLadObMqkMSCPNGF" title="YouTube video player" width="560"></iframe></p>
+<p><span>投球機構自動賦歸:</span></p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/77yhlC31Hrc?si=H1K7yfWLCCS2G-hh" title="YouTube video player" width="560"></iframe></p>
+<p><span>籃框隨機移動和感測器角度調整:</span></p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/gTQDH3xE010?si=AkRqnaJ4Psfe10tT" title="YouTube video player" width="560"></iframe></p>
 <p>心得:</p>
 <p>一開始我先去下載老師的檔案，去問chatGPT了解每一行程式是在說明什麼，我們第一部先去設定投籃機的投球數量，我們用了老師原本的生成球程式來進行修改，保留原本透過按鍵來生成球的部分，另外再讓ChatGPT幫我把程式修改成生成球數到達10球時，顯示遊戲結束，已投出10球，投球數量不一定要10球，可以更多或更少，設定十顆是為了不要程式當機閃退。第二部我們修改了擺臂的作動，原本是按下鍵盤M擺臂投出球，按下鍵盤K讓擺臂回到原始位子，我們將兩個按鍵的功能合併，變成按下M投出後等待1秒後回歸到原點，這樣可以避免沒有擺臂正，就生成球導致兩者相互碰撞，偏移原本的準心和浪費一次投球的機會，後來我們又新增了投出球時訊息欄顯示投球，歸位後顯示自動復歸，可以時刻監控投籃機運作情況。第三部我們修改了籃框隨機移動的部分，我們把原本程式裡面的控制部分移除，讓ChatGPT寫一個得分偵測器，偵測到進球得分後，隨機的移動，改變籃框的位置，所以每進一球，籃框就會透過移動或旋轉來改變位置。偵測器的部分，原先要投得非常精準才能得分，於是我們先將感測範圍0.11公尺加大到0.15，原本的方向是朝下改成向上向前，能改善角度進球偵測不到的問題。</p><br />Exam3-3 << <a href='Exam3-3.html'>Previous</a> <a href='Brython.html'>Next</a> >> Brython</div>
